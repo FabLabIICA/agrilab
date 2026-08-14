@@ -189,7 +189,7 @@ body {
 }
 
 .hero-sponsors img {
-  height: 38px;
+  height: 55px;
   width: auto;
   opacity: 0.9;
   filter: brightness(0) invert(1);
@@ -887,4 +887,218 @@ body {
   .activities-table-wrapper {
     overflow-x: auto;
   }
+}
+/* 2. Contenedor del Marco (Imagen) */
+.marco-inferior {
+  width: 100%;
+  height: 50px;
+  line-height: 0;
+  overflow: visible; /* Cambiamos a visible para dejar sobresalir el desplazamiento */
+  
+  /* CLAVE: Posicionamiento y capas superiores */
+  position: relative;
+  z-index: 10; 
+  pointer-events: none; /* Evita bloquear clics en elementos de fondo */
+
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Estilos de la imagen del marco */
+.marco-inferior img {
+  width: 100%;
+  height: 65px;
+  object-fit: cover;
+  object-position: center;
+  
+  display: block; 
+  position: relative;
+  top: -30px; /* Tu desplazamiento actual */
+}
+
+
+
+/* Sección de contenido de ejemplo debajo */
+.contenido {
+  padding: 50px;
+  text-align: center;
+}
+
+/* --- ESTILOS DE LA SECCIÓN AGRI-LAB --- */
+.agri-oferta {
+  background-color: #f8fafc; /* Fondo gris/verde muy claro y limpio */
+  padding: 60px 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.agri-contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.agri-titulo {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #1e293b;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.agri-titulo span {
+  color: #16a34a; /* Color verde institucional / agrícola */
+}
+
+/* Grid adaptable de 4 tarjetas */
+.agri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Tarjeta individual */
+.agri-card {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Efecto Elegante al pasar el mouse */
+.agri-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px -5px rgba(22, 163, 74, 0.15);
+  border-color: #86efac;
+}
+
+.agri-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.agri-card h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.agri-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Divisor elegante dentro de la misma sección */
+.agri-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.12), transparent);
+  margin: 50px 0;
+}
+
+/* Título de la subsección */
+.agri-subtitulo {
+  font-size: 1.6rem;
+  color: #1e293b;
+  margin-bottom: 35px;
+  font-weight: 700;
+}
+
+/* Contenedor de 2 columnas de pilares (sin aspecto de tarjetas) */
+/* Contenedor de pilares con 2 columnas exactas en pantallas grandes */
+.agri-pilares-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Fuerza 2 columnas iguales */
+  gap: 35px 50px; /* Espaciado entre filas y columnas */
+  max-width: 900px; /* Limita el ancho para que no queden muy estiradas */
+  margin: 0 auto; /* Centra todo el bloque en la página */
+}
+
+/* Adaptación para pantallas pequeñas / móviles */
+@media (max-width: 768px) {
+  .agri-pilares-grid {
+    grid-template-columns: 1fr; /* Cambia a 1 sola columna en teléfonos */
+    gap: 25px;
+  }
+}
+
+/* Contenedor principal del logo en texto */
+.agri-logo-text {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 4px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* "AGRI" en verde */
+.agri-green {
+  color: #669933;
+  font-size: 1.1em;
+  letter-spacing: -0.5px;
+}
+
+/* Grupo vertical de "Lab" y "506" */
+.agri-lab-group {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinea el 506 a la derecha debajo de Lab */
+  line-height: 0.9;
+}
+
+/* "Lab" en naranja */
+.agri-orange {
+  color: #ff751f;
+  font-size: 1.1em;
+}
+
+/* "506" en azul oscuro justo debajo */
+.agri-blue {
+  color: #4f8dff;
+  font-size: 0.75em;
+  font-weight: 900;
+  margin-top: 2px;
+}
+
+/* Ítem individual tipo lista/pilar */
+.agri-pilar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+/* Estilo para los iconos de FontAwesome */
+.pilar-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(22, 163, 74, 0.1); /* Fondo verde traslúcido suave */
+  color: #16a34a; /* Color verde del icono */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.pilar-content h4 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+  font-weight: 600;
+}
+
+.pilar-content p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
 }
