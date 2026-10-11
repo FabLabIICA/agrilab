@@ -4,183 +4,510 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AGRI Lab 506 - De la Inspiración a la Implementación</title>
+  
+  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+  <!-- Fuentes e Iconos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/noticias-carousel.css">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/logo192.png">
-  <link rel="shortcut icon" href="assets/images/logo-google-192x192.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo192.png">
+
+ 
+    <!-- Ícono para resultados de búsqueda de Google y pestañas -->
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/logo192.png">
+    <link rel="shortcut icon" href="assets/images/logo-google-192x192.png">
+    
+    <!-- Apple Touch Icon (para móviles y navegadores móviles) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo192.png">
+    
+
 </head>
 <body>
-<header class="topbar">
-  <div class="logo-wrap"><img src="assets/images/logoAGRILab.svg" alt="AGRI Lab 506 Logo" class="header-logo-img"></div>
-  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
-  <nav class="nav" id="mainNav">
-    <a class="active" href="#inicio">Inicio</a><a href="#agri-talk">AGRI Talk</a><a href="#que-es">¿Qué es AGRI Lab 506?</a>
-    <a href="#ruta">Ruta de Impacto</a><a href="#quienes-participan">Participantes</a><a href="#actividades">Cronograma</a><a href="#noticias">Noticias</a>
-  </nav>
-</header>
 
-<main class="page-content" id="inicio">
-  <section class="hero-agrilab">
-    <div class="hero-video-wrapper">
-      <video autoplay loop muted playsinline poster="assets/images/hero_poster.png" class="hero-video">
-        <source src="assets/videos/hero.mp4" type="video/mp4">Tu navegador no soporta video HTML5.
-      </video><div class="hero-overlay-dark"></div>
+  <!-- CABECERA PRINCIPAL (TOPBAR) -->
+  <header class="topbar">
+    <div class="logo-wrap">
+      <img src="assets/images/logoAGRILab.svg" alt="AGRI Lab 506 Logo" class="header-logo-img">
     </div>
-    <div class="hero-content-container container">
-      <div class="hero-text-block">
-        <div class="sponsors-logos-wrap hero-sponsors">
-          <img src="assets/images/logo_mag_blanco.svg" alt="Ministerio de Agricultura y Ganadería (MAG)">
-          <img src="assets/images/logo_ina_blanco.png" alt="Instituto Nacional de Aprendizaje (INA)">
-          <img src="assets/images/logo_iica_blanco.svg" alt="Instituto Interamericano de Cooperación para la Agricultura (IICA)">
-        </div>
-        <h1 class="hero-title"><span class="agri-logo-text"><span class="agri-green">AGRI</span><span class="agri-lab-group"><span class="agri-orange">Lab</span><span class="agri-blue">506</span></span></span>: Innovación, liderazgo y emprendimiento para las juventudes del agro.</h1>
-        <p class="hero-subtitle">Una iniciativa del MAG, INA e IICA para impulsar una nueva generación de jóvenes capaces de transformar el agro costarricense mediante innovación, tecnología y acción.</p>
-        <div class="hero-actions">
-          <a href="https://forms.gle/6VkeKqULD3dHgNjB7" target="_blank" rel="noopener noreferrer" class="primary-btn">Registrarse en AGRI Lab 506</a>
-          <a href="#agri-talk" class="secondary-btn-outline">Conocer más</a>
-        </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="mainNav">
+      <a class="active" href="#inicio">Inicio</a>
+      <a href="#agri-talk">AGRI Talk</a>
+      <a href="#que-es">¿Qué es AGRI Lab 506?</a>
+      <a href="#ruta">Ruta de Impacto</a>
+      <a href="#quienes-participan">Participantes</a>
+      <a href="#actividades">Cronograma</a>
+      <a href="#noticias">Noticias</a>
+    </nav>
+  </header>
+
+  <main class="page-content" id="inicio">
+
+    <!-- SECCIÓN HERO: ENGANCHE CON AGRI TALK Y AGRI LAB 506 -->
+    <section class="hero-agrilab">
+      <!-- Video Hero de fondo -->
+      <div class="hero-video-wrapper">
+        <video autoplay loop muted playsinline poster="assets/images/hero_poster.png" class="hero-video">
+          <source src="assets/videos/hero.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+        <div class="hero-overlay-dark"></div>
       </div>
-    </div>
-  </section>
 
-  <section id="agri-talk" class="agritalk-feature-section offers-section" style="padding-top:0">
-    <div class="marco-inferior" style="margin-bottom:60px"><img src="assets/images/marco1.svg" alt="Marco decorativo inferior"></div>
-    <div class="container">
-      <div class="agritalk-card" style="background:#fff;border-radius:16px;padding:40px;box-shadow:0 10px 30px rgba(0,0,0,.05);border-left:6px solid #2E7D32">
-        <div class="grid-2col" style="align-items:center">
-          <div>
-            <span class="section-tag" style="color:#2E7D32;font-weight:700;text-transform:uppercase;letter-spacing:1px">EL SEGUNDO PASO DE LA RUTA</span>
-            <h2 style="font-size:2.2rem;margin:10px 0 15px">ECAs para Extensionistas: Preparación para formar jóvenes</h2>
-            <p class="lead-paragraph"><strong>Fecha: 19 a 23 de Octubre</strong> | Meta: Procesos de aprendizaje en territorios rurales</p>
-            <p>Las Escuelas de Campo (ECAs) llevan AGRI Lab 506 al territorio. Un espacio práctico y participativo donde técnicos aprenden metodologías, exploran nuevas tecnologías, identifican oportunidades y construyen soluciones para los desafíos de sus comunidades y actividades productivas, con el fin de replicar el modelo con jóvenes en sus territorios.</p>
-            <ul style="list-style:none;padding:0;margin:20px 0">
-              <li style="margin-bottom:10px"><i class="fa-solid fa-check-circle" style="color:#2E7D32"></i> <strong>Aprender haciendo:</strong> Experiencias prácticas para conocer y aplicar nuevas herramientas y tecnologías en el agro.</li>
-              <li style="margin-bottom:10px"><i class="fa-solid fa-check-circle" style="color:#2E7D32"></i> <strong>Jóvenes formando jóvenes:</strong> Intercambio de conocimientos, experiencias e ideas entre participantes del territorio.</li>
-              <li style="margin-bottom:10px"><i class="fa-solid fa-check-circle" style="color:#2E7D32"></i> <strong>Identificar oportunidades:</strong> Espacios para reconocer desafíos, generar ideas y conectar capacidades locales con nuevas posibilidades de innovación y emprendimiento.</li>
-            </ul>
+      <div class="hero-content-container container">
+        <div class="hero-text-block">
+          <!-- Banner / Badge destacado del evento más reciente -->
+          <!-- <div class="event-badge-highlight" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.15); backdrop-filter: blur(5px); padding: 6px 16px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.3); color: #fff; margin-bottom: 15px; font-weight: 600; font-size: 0.9rem;">
+            <i class="fa-solid fa-comments" style="color: #4CAF50;"></i> Próximo Evento: <strong>AGRI-TALK</strong> — Lunes 17 de Agosto
+          </div> -->
+
+          <!-- Coorganizadores MAG, INA, IICA -->
+          <div class="sponsors-logos-wrap hero-sponsors">
+            <img src="assets/images/logo_mag_blanco.svg" alt="Ministerio de Agricultura y Ganadería (MAG)">
+            <img src="assets/images/logo_ina_blanco.png" alt="Instituto Nacional de Aprendizaje (INA)">
+            <img src="assets/images/logo_iica_blanco.svg" alt="Instituto Interamericano de Cooperación para la Agricultura (IICA)">
           </div>
-          <div style="text-align:center"><div style="background:#e8f5e9;padding:30px;border-radius:12px">
-            <i class="fa-solid fa-seedling" style="font-size:4rem;color:#2E7D32;margin-bottom:15px"></i>
-            <h3>Inspirar • Formar • Emprender • Solucionar</h3>
-            <p style="font-size:.95rem;color:#555;margin-top:10px">"El conocimiento se aprende, se comparte y se transforma en acción."</p>
-          </div></div>
+
+          <h1 class="hero-title"><span class="agri-logo-text">
+            <span class="agri-green">AGRI</span>
+            <span class="agri-lab-group">
+              <span class="agri-orange">Lab</span>
+              <span class="agri-blue">506</span>
+            </span>
+          </span>: Innovación, liderazgo y emprendimiento para las juventudes del agro.</h1>
+          <p class="hero-subtitle">Una iniciativa del MAG, INA e IICA para impulsar una nueva generación de jóvenes capaces de transformar el agro costarricense mediante innovación, tecnología y acción.</p>
+          
+          <div class="hero-actions">
+            <a href="https://forms.gle/6VkeKqULD3dHgNjB7" target="_blank" rel="noopener noreferrer" class="primary-btn"> Registrarse en AGRI Lab 506</a>
+            <a href="#agri-talk" class="secondary-btn-outline">Conocer más</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </section> <!-- Cierre de section.hero-agrilab -->
+
+  <!-- SECCIÓN BIENVENIDA / ANIMACIÓN LOGO AGRI LAB -->
+  
+
+    <!-- SECCIÓN DESTACADA: AGRI TALK (EL ENGANCHE) -->
+    <section id="agri-talk" class="agritalk-feature-section offers-section"  style="padding-top: 0;">
+      <div class="marco-inferior" style=" margin-bottom: 60px;">
+        <img src="assets/images/marco1.svg" alt="Marco decorativo inferior">
+    </div>
+    <div class="container">
+  <div class="agritalk-card" style="background: #ffffff; border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 6px solid #2E7D32;">
+    <div class="grid-2col" style="align-items: center;">
+      <div>
+        <span class="section-tag" style="color: #2E7D32; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">EL SEGUNDO PASO DE LA RUTA</span>
+        <h2 style="font-size: 2.2rem; margin: 10px 0 15px 0;">ECAs para Extensionistas: Preparación para formar jóvenes</h2>
+        <p class="lead-paragraph"><strong>Fecha: 19 a 23 de Octubre</strong> | Meta: Procesos de aprendizaje en territorios rurales</p>
+        <p>Las Escuelas de Campo (ECAs) llevan AGRI Lab 506 al territorio. Un espacio práctico y participativo donde técnicos aprenden metodologías, exploran nuevas tecnologías, identifican oportunidades y construyen soluciones para los desafíos de sus comunidades y actividades productivas, con el fin de replicar el modelo con jóvenes en sus territorios.</p>
+        <ul style="list-style: none; padding: 0; margin: 20px 0;">
+          <li style="margin-bottom: 10px;"><i class="fa-solid fa-check-circle" style="color: #2E7D32;"></i> <strong>Aprender haciendo:</strong> Experiencias prácticas para conocer y aplicar nuevas herramientas y tecnologías en el agro.</li>
+          <li style="margin-bottom: 10px;"><i class="fa-solid fa-check-circle" style="color: #2E7D32;"></i> <strong>Jóvenes formando jóvenes:</strong> Intercambio de conocimientos, experiencias e ideas entre participantes del territorio.</li>
+          <li style="margin-bottom: 10px;"><i class="fa-solid fa-check-circle" style="color: #2E7D32;"></i> <strong>Identificar oportunidades:</strong> Espacios para reconocer desafíos, generar ideas y conectar capacidades locales con nuevas posibilidades de innovación y emprendimiento.</li>
+        </ul>
+      </div>
+      <div style="text-align: center;">
+        <div style="background: #e8f5e9; padding: 30px; border-radius: 12px;">
+          <i class="fa-solid fa-seedling" style="font-size: 4rem; color: #2E7D32; margin-bottom: 15px;"></i>
+          <h3>Inspirar &bull; Formar &bull; Emprender &bull; Solucionar</h3>
+          <p style="font-size: 0.95rem; color: #555; margin-top: 10px;">"El conocimiento se aprende, se comparte y se transforma en acción."</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <section id="que-es" class="container about-section" style="padding-top:60px;padding-bottom:60px">
-    <div class="section-title-wrap text-center"><span class="section-tag">NUESTRO PROPÓSITO</span><h2>¿Qué es AGRI Lab 506?</h2></div>
-    <div class="about-grid">
-      <div class="about-text">
-        <p class="lead-paragraph">Costa Rica enfrenta un importante desafío generacional en el sector agropecuario. La edad promedio de los productores supera los 60 años y cada vez menos jóvenes visualizan el agro como una opción para desarrollarse profesionalmente, emprender o generar oportunidades en sus comunidades.</p>
-        <p>Al mismo tiempo, el sector requiere nuevas capacidades para afrontar retos relacionados con la productividad, la innovación, la sostenibilidad, el uso de tecnologías digitales y la adaptación al cambio climático.</p>
-        <p><strong>AGRI Lab 506</strong> surge como una respuesta a este desafío. Es una plataforma de formación, innovación y articulación impulsada por el Ministerio de Agricultura y Ganadería (MAG), el Instituto Nacional de Aprendizaje (INA) y el Instituto Interamericano de Cooperación para la Agricultura (IICA), orientada a fortalecer las capacidades de las juventudes rurales y agroalimentarias mediante experiencias prácticas, aprendizaje aplicado y conexión con el ecosistema de innovación del país.</p>
-        <p>Más que un programa de capacitación, <strong>AGRI Lab 506</strong> busca crear una comunidad de jóvenes capaces de identificar oportunidades, desarrollar soluciones, impulsar emprendimientos y convertirse en agentes de transformación en sus territorios.</p>
-      </div>
-      <div class="about-video-container">
-        <div style="text-align:center"><div style="padding:20px">
-          <video autoplay loop muted playsinline style="width:100%;height:auto;border-radius:8px;display:block;margin:0 auto 15px">
-            <source src="assets/videos/bienvenida.mp4" type="video/mp4">Tu navegador no soporta videos HTML5.
-          </video>
-        </div></div>
-        <div class="video-card"><div class="iframe-responsive">
+<!-- SECCIÓN FUSIONADA: ¿QUÉ ES Y QUÉ OFRECE AGRI LAB 506? -->
+<section id="que-es" class="container about-section" style="padding-top: 60px; padding-bottom: 60px;">
+  
+  <!-- Título principal -->
+  <div class="section-title-wrap text-center">
+    <span class="section-tag">NUESTRO PROPÓSITO</span>
+    <h2>¿Qué es AGRI Lab 506?</h2>
+  </div>
+
+  <!-- Bloque superior: Texto expositivo + Video -->
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="lead-paragraph">Costa Rica enfrenta un importante desafío generacional en el sector agropecuario. La edad promedio de los productores supera los 60 años y cada vez menos jóvenes visualizan el agro como una opción para desarrollarse profesionalmente, emprender o generar oportunidades en sus comunidades.</p>
+      <p>Al mismo tiempo, el sector requiere nuevas capacidades para afrontar retos relacionados con la productividad, la innovación, la sostenibilidad, el uso de tecnologías digitales y la adaptación al cambio climático.</p>
+      <p><strong>AGRI Lab 506</strong> surge como una respuesta a este desafío. Es una plataforma de formación, innovación y articulación impulsada por el Ministerio de Agricultura y Ganadería (MAG), el Instituto Nacional de Aprendizaje (INA) y el Instituto Interamericano de Cooperación para la Agricultura (IICA), orientada a fortalecer las capacidades de las juventudes rurales y agroalimentarias mediante experiencias prácticas, aprendizaje aplicado y conexión con el ecosistema de innovación del país.</p>
+      <p>Más que un programa de capacitación, <strong>AGRI Lab 506</strong> busca crear una comunidad de jóvenes capaces de identificar oportunidades, desarrollar soluciones, impulsar emprendimientos y convertirse en agentes de transformación en sus territorios.</p>
+    </div>
+
+    <div class="about-video-container">
+      <!-- CÓDIGO NUEVO -->
+<div style="text-align: center;">
+  <div style="padding: 20px;  ">
+    <!-- Logo MP4 animado en modo GIF -->
+    <video autoplay loop muted playsinline style="width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto 15px auto;">
+      <source src="assets/videos/bienvenida.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+    
+  </div>
+</div>
+      <div class="video-card">
+        <div class="iframe-responsive">
           <iframe src="https://player.vimeo.com/video/1214379052?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Video AGRI Lab"></iframe>
-        </div><p class="video-caption"><i class="fa-solid fa-circle-play"></i> Conoce más sobre la experiencia AGRI Lab 506</p></div>
+        </div>
+        <p class="video-caption"><i class="fa-solid fa-circle-play"></i> Conoce más sobre la experiencia AGRI Lab 506</p>
       </div>
     </div>
-    <hr class="agri-divider">
-    <div class="agri-oferta-wrap">
-      <h3 class="agri-subtitulo text-center">¿Qué ofrece la plataforma?</h3>
-      <div class="agri-pilares-grid">
-        <div class="agri-pilar-item"><div class="pilar-icon"><i class="fa-solid fa-seedling"></i></div><div class="pilar-content"><h4>Inspiración y liderazgo</h4><p>Espacios para conocer experiencias exitosas, tendencias, tecnologías emergentes y oportunidades para las nuevas generaciones del agro.</p></div></div>
-        <div class="agri-pilar-item"><div class="pilar-icon"><i class="fa-solid fa-lightbulb"></i></div><div class="pilar-content"><h4>Innovación y soluciones</h4><p>Metodologías prácticas para identificar retos del sector y diseñar soluciones con impacto en la productividad, sostenibilidad y competitividad.</p></div></div>
-        <div class="agri-pilar-item"><div class="pilar-icon"><i class="fa-solid fa-rocket"></i></div><div class="pilar-content"><h4>Emprendimiento y oportunidades</h4><p>Herramientas para fortalecer ideas, desarrollar proyectos y conectar con oportunidades de crecimiento dentro del ecosistema agroalimentario.</p></div></div>
-        <div class="agri-pilar-item"><div class="pilar-icon"><i class="fa-solid fa-diagram-project"></i></div><div class="pilar-content"><h4>Articulación y redes</h4><p>Vinculación con instituciones, organizaciones, empresas, centros de conocimiento y actores que apoyan iniciativas lideradas por jóvenes.</p></div></div>
-      </div>
-    </div>
-  </section>
+  </div>
 
-  <section id="ruta" class="offers-section"><div class="container">
-    <div class="section-title-wrap text-center"><span class="section-tag">METODOLOGÍA DE TRABAJO</span><h2>La Ruta de Innovación AGRI Lab 506</h2><p class="section-subtitle">Un proceso continuo de cuatro etapas para pasar de la idea a la acción territorial</p></div>
-    <div class="pillar-grid">
-      <article class="eje-card"><div class="eje-card-header"><span class="eje-number">01</span><div class="eje-icon-wrap"><i class="fa-solid fa-comments"></i></div></div><div class="eje-card-body"><span class="eje-tag">Punto de Partida</span><h3>1. INSPIRAR (AGRI-Talk)</h3><p>Diálogos directos entre jóvenes, exposición de casos de éxito agrotecnológicos y articulación de los primeros lazos de la comunidad.</p></div><div class="eje-card-footer"><span class="strategic-prompt"><i class="fa-solid fa-calendar"></i> 17 de Agosto</span></div></article>
-      <article class="eje-card"><div class="eje-card-header"><span class="eje-number">02</span><div class="eje-icon-wrap"><i class="fa-solid fa-chalkboard-user"></i></div></div><div class="eje-card-body"><span class="eje-tag">Escuelas de Campo</span><h3>2. FORMAR (ECAs-t)</h3><p>Escuelas de campo tecnológicas en fincas. Formación de extensionistas y multiplicadores territoriales para llevar la tecnología al terreno.</p></div><div class="eje-card-footer"><span class="strategic-prompt"><i class="fa-solid fa-wheat-awn"></i> Aprendizaje en finca</span></div></article>
-      <article class="eje-card"><div class="eje-card-header"><span class="eje-number">03</span><div class="eje-icon-wrap"><i class="fa-solid fa-rocket"></i></div></div><div class="eje-card-body"><span class="eje-tag">Ideación e Incubación</span><h3>3. EMPRENDER</h3><p>Acompañamiento en modelos de negocio, co-creación, mentorías especializadas y vinculación con aliados para financiamiento.</p></div><div class="eje-card-footer"><span class="strategic-prompt"><i class="fa-solid fa-chart-line"></i> Modelos sostenibles</span></div></article>
-      <article class="eje-card"><div class="eje-card-header"><span class="eje-number">04</span><div class="eje-icon-wrap"><i class="fa-solid fa-lightbulb"></i></div></div><div class="eje-card-body"><span class="eje-tag">Impacto Real</span><h3>4. SOLUCIONAR</h3><p>Prototipado, validación de tecnologías e implementación acelerada para resolver desafíos específicos de las regiones productivas.</p></div><div class="eje-card-footer"><span class="strategic-prompt"><i class="fa-solid fa-gears"></i> Soluciones territoriales</span></div></article>
-    </div>
-  </div></section>
+  <!-- Divisor sutil interno -->
+  <hr class="agri-divider">
 
-  <section id="quienes-participan" class="container participants-section"><div class="grid-2col">
-    <div class="participants-info"><span class="section-tag">PÚBLICO Y RUTAS</span><h2>¿Quiénes pueden participar?</h2>
-      <div class="participants-age-highlight"><p><i class="fa-solid fa-user-check"></i> <strong>AGRI Lab 506</strong> está dirigido a jóvenes entre los <strong>15 y 35 años</strong> de todo Costa Rica que tengan interés en el sector agropecuario y agroalimentario.</p>
-      <p>Pueden participar estudiantes, productores, emprendedores, extensionistas, educadores, integrantes de organizaciones rurales y cualquier persona joven interesada en contribuir al futuro del agro costarricense.</p></div>
-      <ul class="participants-list">
-        <li><i class="fa-solid fa-user-tie"></i><span><strong>Ruta 1 — Extensionistas y Técnicos:</strong> Fortalecimiento de capacidades digitales, liderazgo y extensión moderna para convertirse en formadores multiplicadores.</span></li>
-        <li><i class="fa-solid fa-seedling"></i><span><strong>Ruta 2 — Jóvenes Productores y Emprendedores:</strong> Adopción tecnológica, diseño de soluciones a la medida e impulso a modelos de negocio rurales.</span></li>
-      </ul>
-    </div>
-    <div class="participants-card-accent"><div class="quote-box"><i class="fa-solid fa-quote-left quote-icon"></i><p class="quote-text">El futuro del agro necesita nuevas ideas, nuevos liderazgos y nuevas soluciones. AGRI-Lab es un espacio para aprender, innovar, emprender y construir ese futuro juntos.</p><span class="quote-signature">— Equipo AGRI Lab 506</span></div></div>
-  </div></section>
-
-  <section id="actividades" class="activities-section"><div class="container">
-    <div class="section-title-wrap text-center"><span class="section-tag">HOJA DE RUTA</span><h2>Hitos y Próximas Actividades</h2><p class="section-subtitle">Acompaña la evolución del programa desde el evento de apertura hasta la implementación territorial</p></div>
-    <div class="activities-table-wrapper"><table class="activities-table">
-      <thead><tr><th><i class="fa-solid fa-calendar"></i> Cronograma</th><th><i class="fa-solid fa-flag"></i> Hito / Actividad</th><th><i class="fa-solid fa-bullseye"></i> Meta de Impacto</th><th><i class="fa-solid fa-arrow-pointer"></i> Acción</th></tr></thead>
-      <tbody>
-        <tr style="background-color:rgba(46,125,50,.05)"><td class="date-cell"><span class="badge-date">Lunes 17 Agosto</span></td><td class="activity-cell"><strong>AGRI-TALK (Evento de Apertura)</strong><p>Conversatorio e intercambio virtual con jóvenes líderes de la innovación agrotecnológica regional.</p></td><td class="meta-cell"><strong>+100 Personas</strong> capacitadas e inspiradas</td><td class="action-cell"><span class="status-upcoming">Realizado</span></td></tr>
-        <tr><td class="date-cell"><span class="badge-date upcoming">4ta sem. Agosto</span></td><td class="activity-cell"><strong>Formador de Formadores (ECAs-t)</strong><p>Talleres e inmersión técnica para técnicos y extensionistas en escuelas de campo tecnológicas.</p></td><td class="meta-cell"><strong>+30 Técnicos</strong> multiplicadores territoriales</td><td class="action-cell"><span class="status-upcoming">19 a 23 de Octubre</span></td></tr>
-        <tr><td class="date-cell"><span class="badge-date upcoming">3ra sem. Setiembre</span></td><td class="activity-cell"><strong>ECA's-t Jóvenes formando Jóvenes</strong><p>Despliegue masivo de transferencia de conocimiento e incubación de proyectos en territorios.</p></td><td class="meta-cell"><strong>+300 Jóvenes</strong> impulsando innovación</td><td class="action-cell"><span class="status-upcoming">16 a 20 de Noviembre</span></td></tr>
-        <tr><td class="date-cell"><span class="badge-date upcoming">Finales Noviembre</span></td><td class="activity-cell"><strong>Escalamiento y Soluciones Finales</strong><p>Prototipado, validación y presentación de soluciones concretas para el sector agroalimentario.</p></td><td class="meta-cell"><strong>+5 Iniciativas</strong> con potencial de implementación</td><td class="action-cell"><span class="status-upcoming">Diciembre</span></td></tr>
-      </tbody>
-    </table></div>
-  </div></section>
-
-  <!-- NOTICIAS: Swiper renderiza las coberturas desde js/index.js -->
-  <section id="noticias" class="container news-section">
-    <div class="section-title-wrap text-center">
-      <span class="section-tag">ACTUALIDAD</span><h2>Noticias y Novedades</h2>
-      <p class="section-subtitle">AGRI Lab 506 en los medios: noticias, entrevistas y coberturas nacionales e internacionales.</p>
-    </div>
-    <div class="news-carousel-shell">
-      <button class="news-nav news-prev" id="newsPrev" type="button" aria-label="Noticias anteriores"><i class="fa-solid fa-chevron-left"></i></button>
-      <div class="swiper news-swiper" aria-label="Carrusel de noticias y coberturas">
-        <div class="swiper-wrapper" id="newsTrack">
-          <noscript><p>Activa JavaScript para ver las noticias y coberturas.</p></noscript>
+  <!-- Bloque inferior: ¿Qué ofrece? (Pilares elegantes en formato de lista técnica) -->
+  <div class="agri-oferta-wrap">
+    <h3 class="agri-subtitulo text-center">¿Qué ofrece la plataforma?</h3>
+    
+    <div class="agri-pilares-grid">
+      
+      <!-- Pilar 1 -->
+      <div class="agri-pilar-item">
+        <div class="pilar-icon">
+          <i class="fa-solid fa-seedling"></i>
+        </div>
+        <div class="pilar-content">
+          <h4>Inspiración y liderazgo</h4>
+          <p>Espacios para conocer experiencias exitosas, tendencias, tecnologías emergentes y oportunidades para las nuevas generaciones del agro.</p>
         </div>
       </div>
-      <button class="news-nav news-next" id="newsNext" type="button" aria-label="Noticias siguientes"><i class="fa-solid fa-chevron-right"></i></button>
+
+      <!-- Pilar 2 -->
+      <div class="agri-pilar-item">
+        <div class="pilar-icon">
+          <i class="fa-solid fa-lightbulb"></i>
+        </div>
+        <div class="pilar-content">
+          <h4>Innovación y soluciones</h4>
+          <p>Metodologías prácticas para identificar retos del sector y diseñar soluciones con impacto en la productividad, sostenibilidad y competitividad.</p>
+        </div>
+      </div>
+
+      <!-- Pilar 3 -->
+      <div class="agri-pilar-item">
+        <div class="pilar-icon">
+          <i class="fa-solid fa-rocket"></i>
+        </div>
+        <div class="pilar-content">
+          <h4>Emprendimiento y oportunidades</h4>
+          <p>Herramientas para fortalecer ideas, desarrollar proyectos y conectar con oportunidades de crecimiento dentro del ecosistema agroalimentario.</p>
+        </div>
+      </div>
+
+      <!-- Pilar 4 -->
+      <div class="agri-pilar-item">
+        <div class="pilar-icon">
+          <i class="fa-solid fa-diagram-project"></i>
+        </div>
+        <div class="pilar-content">
+          <h4>Articulación y redes</h4>
+          <p>Vinculación con instituciones, organizaciones, empresas, centros de conocimiento y actores que apoyan iniciativas lideradas por jóvenes.</p>
+        </div>
+      </div>
+
     </div>
-    <div class="news-carousel-footer"><div class="swiper-pagination" id="newsPagination"></div><p class="news-count" id="newsCount" aria-live="polite"></p></div>
-  </section>
+  </div>
 
-  <section class="sponsors-carousel-section"><div class="container text-center"><h3>Impulsado e Integrado por</h3>
-    <div class="sponsors-logos-wrap">
-      <img src="assets/images/mag.svg" class="sponsors-logos-o" alt="Ministerio de Agricultura y Ganadería">
-      <img src="assets/images/ina.svg" class="sponsors-logos-o" alt="Instituto Nacional de Aprendizaje">
-      <img src="assets/images/iica.svg" class="sponsors-logos-o" alt="Instituto Interamericano de Cooperación para la Agricultura">
+</section>
+
+    <!-- SECCIÓN RUTA DE IMPACTO / PILARES -->
+    <section id="ruta" class="offers-section">
+      <div class="container">
+        <div class="section-title-wrap text-center">
+          <span class="section-tag">METODOLOGÍA DE TRABAJO</span>
+          <h2>La Ruta de Innovación AGRI Lab 506</h2>
+          <p class="section-subtitle">Un proceso continuo de cuatro etapas para pasar de la idea a la acción territorial</p>
+        </div>
+
+        <div class="pillar-grid">
+          <!-- Etapa 1 -->
+          <article class="eje-card">
+            <div class="eje-card-header">
+              <span class="eje-number">01</span>
+              <div class="eje-icon-wrap"><i class="fa-solid fa-comments"></i></div>
+            </div>
+            <div class="eje-card-body">
+              <span class="eje-tag">Punto de Partida</span>
+              <h3>1. INSPIRAR (AGRI-Talk)</h3>
+              <p>Diálogos directos entre jóvenes, exposición de casos de éxito agrotecnológicos y articulación de los primeros lazos de la comunidad.</p>
+            </div>
+            <div class="eje-card-footer">
+              <span class="strategic-prompt"><i class="fa-solid fa-calendar"></i> 17 de Agosto</span>
+            </div>
+          </article>
+
+          <!-- Etapa 2 -->
+          <article class="eje-card">
+            <div class="eje-card-header">
+              <span class="eje-number">02</span>
+              <div class="eje-icon-wrap"><i class="fa-solid fa-chalkboard-user"></i></div>
+            </div>
+            <div class="eje-card-body">
+              <span class="eje-tag">Escuelas de Campo</span>
+              <h3>2. FORMAR (ECAs-t)</h3>
+              <p>Escuelas de campo tecnológicas en fincas. Formación de extensionistas y multiplicadores territoriales para llevar la tecnología al terreno.</p>
+            </div>
+            <div class="eje-card-footer">
+              <span class="strategic-prompt"><i class="fa-solid fa-wheat-Awn"></i> Aprendizaje en finca</span>
+            </div>
+          </article>
+
+          <!-- Etapa 3 -->
+          <article class="eje-card">
+            <div class="eje-card-header">
+              <span class="eje-number">03</span>
+              <div class="eje-icon-wrap"><i class="fa-solid fa-rocket"></i></div>
+            </div>
+            <div class="eje-card-body">
+              <span class="eje-tag">Ideación e Incubación</span>
+              <h3>3. EMPRENDER</h3>
+              <p>Acompañamiento en modelos de negocio, co-creación, mentorías especializadas y vinculación con aliados para financiamiento.</p>
+            </div>
+            <div class="eje-card-footer">
+              <span class="strategic-prompt"><i class="fa-solid fa-chart-line"></i> Modelos sostenibles</span>
+            </div>
+          </article>
+
+          <!-- Etapa 4 -->
+          <article class="eje-card">
+            <div class="eje-card-header">
+              <span class="eje-number">04</span>
+              <div class="eje-icon-wrap"><i class="fa-solid fa-lightbulb"></i></div>
+            </div>
+            <div class="eje-card-body">
+              <span class="eje-tag">Impacto Real</span>
+              <h3>4. SOLUCIONAR</h3>
+              <p>Prototipado, validación de tecnologías e implementación acelerada para resolver desafíos específicos de las regiones productivas.</p>
+            </div>
+            <div class="eje-card-footer">
+              <span class="strategic-prompt"><i class="fa-solid fa-gears"></i> Soluciones territoriales</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN ¿QUIÉNES PUEDEN PARTICIPAR? -->
+    <section id="quienes-participan" class="container participants-section">
+      <div class="grid-2col">
+        <div class="participants-info">
+          <span class="section-tag">PÚBLICO Y RUTAS</span>
+          <h2>¿Quiénes pueden participar?</h2>
+          <div class="participants-age-highlight">
+            <p ><i class="fa-solid fa-user-check"></i> <strong></strong>AGRI Lab 506 </strong>está dirigido a jóvenes entre los <strong> 15 y 35 años </strong>de todo Costa Rica que tengan interés en el sector agropecuario y agroalimentario.</p>
+            <p></p>
+            <p >Pueden participar estudiantes, productores, emprendedores, extensionistas, educadores, integrantes de organizaciones rurales y cualquier persona joven interesada en contribuir al futuro del agro costarricense.</p>
+          </div>
+          <ul class="participants-list">
+            <li><i class="fa-solid fa-user-tie"></i> <strong>Ruta 1 — Extensionistas y Técnicos:</strong> Fortalecimiento de capacidades digitales, liderazgo y extensión moderna para convertirse en formadores multiplicadores.</li>
+            <li><i class="fa-solid fa-seedling"></i> <strong>Ruta 2 — Jóvenes Productores y Emprendedores:</strong> Adopción tecnológica, diseño de soluciones a la medida e impulso a modelos de negocio rurales.</li>
+            
+          </ul>
+        </div>
+        <div class="participants-card-accent">
+          <div class="quote-box">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <p class="quote-text">El futuro del agro necesita nuevas ideas, nuevos liderazgos y nuevas soluciones. AGRI-Lab es un espacio para aprender, innovar, emprender y construir ese futuro juntos</p>
+            <span class="quote-signature">— Equipo AGRI Lab 506</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN METAS Y PRÓXIMAS ACTIVIDADES -->
+    <section id="actividades" class="activities-section">
+      <div class="container">
+        <div class="section-title-wrap text-center">
+          <span class="section-tag">HOJA DE RUTA</span>
+          <h2>Hitos y Próximas Actividades</h2>
+          <p class="section-subtitle">Acompaña la evolución del programa desde el evento de apertura hasta la implementación territorial</p>
+        </div>
+
+        <div class="activities-table-wrapper">
+          <table class="activities-table">
+            <thead>
+              <tr>
+                <th><i class="fa-solid fa-calendar"></i> Cronograma</th>
+                <th><i class="fa-solid fa-flag"></i> Hito / Actividad</th>
+                <th><i class="fa-solid fa-bullseye"></i> Meta de Impacto</th>
+                <th><i class="fa-solid fa-arrow-pointer"></i> Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background-color: rgba(46, 125, 50, 0.05);">
+                <td class="date-cell"><span class="badge-date" >Lunes 17 Agosto</span></td>
+                <td class="activity-cell">
+                  <strong>AGRI-TALK (Evento de Apertura)</strong>
+                  <p>Conversatorio e intercambio virtual con jóvenes líderes de la innovación agrotecnológica regional.</p>
+                </td>
+                <td class="meta-cell"><strong>+100 Personas</strong> capacitadas e inspiradas</td>
+                <td class="action-cell">
+                  <!-- <a href="https://forms.office.com/r/AGRILabRegistration" target="_blank" class="table-btn">Inscribirse</a> -->
+                   <span class="status-upcoming">Realizado</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="date-cell"><span class="badge-date upcoming">4ta sem. Agosto</span></td>
+                <td class="activity-cell">
+                  <strong>Formador de Formadores (ECAs-t)</strong>
+                  <p>Talleres e inmersión técnica para técnicos y extensionistas en escuelas de campo tecnológicas.</p>
+                </td>
+                <td class="meta-cell"><strong>+30 Técnicos</strong> multiplicadores territoriales</td>
+                <td class="action-cell">
+                  <span class="status-upcoming">19 a 23 de Octubre</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="date-cell"><span class="badge-date upcoming">3ra sem. Setiembre</span></td>
+                <td class="activity-cell">
+                  <strong>ECA's-t Jóvenes formando Jóvenes</strong>
+                  <p>Despliegue masivo de transferencia de conocimiento e incubación de proyectos en territorios.</p>
+                </td>
+                <td class="meta-cell"><strong>+300 Jóvenes</strong> impulsando innovación</td>
+                <td class="action-cell">
+                  <span class="status-upcoming">16 a 20 de Noviembre</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="date-cell"><span class="badge-date upcoming">Finales Noviembre</span></td>
+                <td class="activity-cell">
+                  <strong>Escalamiento y Soluciones Finales</strong>
+                  <p>Prototipado, validación y presentación de soluciones concretas para el sector agroalimentario.</p>
+                </td>
+                <td class="meta-cell"><strong>+5 Iniciativas</strong> con potencial de implementación</td>
+                <td class="action-cell">
+                  <span class="status-upcoming">Diciembre</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN NOTICIAS -->
+    <section id="noticias" class="container news-section">
+      <div class="section-title-wrap text-center">
+        <span class="section-tag">ACTUALIDAD</span>
+        <h2>Noticias y Novedades</h2>
+        <p class="section-subtitle">Mantente al día con los avances e historias del AGRI Lab 506</p>
+      </div>
+
+      <div class="news-grid">
+        <!-- Noticia 3 -->
+        <article class="news-card">
+          <div class="news-img-wrap">
+            <img src="assets/images/noticia3.jpg" alt="Lanzamiento AGRI Lab 506">
+            <span class="news-date">18 Ago 2026</span>
+          </div>
+          <div class="news-body">
+            <h3>Jóvenes impulsan nueva visión del agro costarricense desde la innovación ... </h3>
+            <p>“No se trata solamente de poner una semilla en la tierra. Necesitamos tecnología y conocimiento para entender qué está pasando, anticipar problemas, utilizar ...</p>
+            <a href="https://mag.go.cr/jovenes-impulsan-nueva-vision-del-agro-costarricense-desde-la-innovacion-la-tecnologia-y-el-emprendimiento/" class="read-more-link">Leer noticia completa <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Noticia 2 -->
+        <article class="news-card">
+          <div class="news-img-wrap">
+            <img src="assets/images/noticia2.jpg" alt="Innovación Agrícola">
+            <span class="news-date">2 Ago 2026</span>
+          </div>
+          <div class="news-body">
+            <h3>Lanzan AGRI-Lab para impulsar el talento joven y la innovación en el agro</h3>
+            <p>El Ministerio de Agricultura y Ganadería (MAG), el Instituto Nacional de Aprendizaje (INA) y el Instituto Interamericano de Cooperación para la Agricultura (IICA) ...</p>
+            <a href="https://agroteccr.com/lanzan-agri-lab-para-impulsar-el-talento-joven-y-la-innovacion-en-el-agro/#google_vignette" class="read-more-link">Leer noticia completa <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Noticia 1 -->
+        <article class="news-card">
+          <div class="news-img-wrap">
+            <img src="assets/images/noticia1.jpg" alt="lazamiento">
+            <span class="news-date">29 Jun 2026</span>
+          </div>
+          <div class="news-body">
+            <h3>MAG, INA y el IICA lanzan AGRI-Lab, iniciativa para impulsar talento y ...</h3>
+            <p>Este martes se realizó el lanzamiento oficial de “AGRI-Lab”, una plataforma de capacitación y gestión impulsada por el Ministerio de Agricultura y Ganadería (MAG) ...</p>
+            <a href="https://mag.go.cr/mag-ina-y-el-iica-lanzan-agri-lab-iniciativa-para-impulsar-talento-y-emprendimiento-tecnologico-de-jovenes-en-el-sector-agropecuario-costarricense/" class="read-more-link">Leer noticia completa <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ORGANIZADORES / INSTITUCIONES LÍDERES -->
+    <section class="sponsors-carousel-section">
+      <div class="container text-center">
+        <h3>Impulsado e Integrado por</h3>
+        <div class="sponsors-logos-wrap">
+          <img src="assets/images/mag.svg" class="sponsors-logos-o" alt="Ministerio de Agricultura y Ganadería">
+          <img src="assets/images/ina.svg" class="sponsors-logos-o" alt="Instituto Nacional de Aprendizaje">
+          <img src="assets/images/iica.svg" class="sponsors-logos-o" alt="Instituto Interamericano de Cooperación para la Agricultura">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER INSTITUCIONAL -->
+  <footer class="main-footer">
+    <div class="footer-grid container">
+      <div class="footer-brand">
+        <h3>AGRI Lab 506 Costa Rica</h3>
+        <p>Una iniciativa de innovación rural diseñada para la solución real de los problemas del sector agroalimentario. De la inspiración a la implementación.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#agri-talk">AGRI Talk</a></li>
+          <li><a href="#que-es">¿Qué es AGRI Lab 506?</a></li>
+          <li><a href="#ruta">Ruta de Innovación</a></li>
+          <li><a href="#quienes-participan">Participantes</a></li>
+          <li><a href="#actividades">Cronograma</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Coorganizan</h4>
+        <ul>
+          <li><i class="fa-solid fa-building"></i> MAG - Ministerio de Agricultura y Ganadería</li>
+          <li><i class="fa-solid fa-graduation-cap"></i> INA - Instituto Nacional de Aprendizaje</li>
+          <li><i class="fa-solid fa-earth-americas"></i> IICA - Inst. Interamericano de Cooperación para la Agricultura</li>
+          <li><i class="fa-solid fa-location-dot"></i> San José, Costa Rica</li>
+        </ul>
+      </div>
     </div>
-  </div></section>
-</main>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AGRI Lab 506 Costa Rica. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
-<footer class="main-footer"><div class="footer-grid container">
-  <div class="footer-brand"><h3>AGRI Lab 506 Costa Rica</h3><p>Una iniciativa de innovación rural diseñada para la solución real de los problemas del sector agroalimentario. De la inspiración a la implementación.</p></div>
-  <div class="footer-links"><h4>Navegación</h4><ul>
-    <li><a href="#inicio">Inicio</a></li><li><a href="#agri-talk">AGRI Talk</a></li><li><a href="#que-es">¿Qué es AGRI Lab 506?</a></li><li><a href="#ruta">Ruta de Innovación</a></li><li><a href="#quienes-participan">Participantes</a></li><li><a href="#actividades">Cronograma</a></li><li><a href="#noticias">Noticias</a></li>
-  </ul></div>
-  <div class="footer-links"><h4>Coorganizan</h4><ul>
-    <li><i class="fa-solid fa-building"></i> MAG - Ministerio de Agricultura y Ganadería</li><li><i class="fa-solid fa-graduation-cap"></i> INA - Instituto Nacional de Aprendizaje</li><li><i class="fa-solid fa-earth-americas"></i> IICA - Inst. Interamericano de Cooperación para la Agricultura</li><li><i class="fa-solid fa-location-dot"></i> San José, Costa Rica</li>
-  </ul></div>
-</div><div class="footer-bottom"><p>&copy; 2026 AGRI Lab 506 Costa Rica. Todos los derechos reservados.</p></div></footer>
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Script básico para activar/desactivar el menú móvil
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="js/index.js"></script>
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => {
+        mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
+      });
+    }
+  </script>
 </body>
 </html>
