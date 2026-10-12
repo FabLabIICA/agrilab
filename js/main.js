@@ -3,7 +3,7 @@
  */
 
 // URL CSV de Google Sheets (Asegúrate de cambiar gid por el de tu pestaña de noticias)
-const SHEET_CSV_NOTICIAS = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSugZplAvcSBZjGPZikP3jhTaKA6DtMwZpOZc0_ophORRVGjemhu3Z5JEY3EnsZMUayuhviSia3Gf58/pub?gid=194535019&single=true&output=csv";
+const SHEET_CSV_NOTICIAS = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQcEPvs5r9YVEcW9VEajpS5x-iYwMQWYMkreg8TK_nDgLEsKqiOt0VEmCgmev_4lkOTHh-62tcOa3a1/pub?gid=0&single=true&output=csv";
 
 let newsSwiperInstance = null;
 
