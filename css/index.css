@@ -1196,3 +1196,71 @@ body::before {
     display: none !important;
   }
 }
+/* ==========================================================================
+   AJUSTES DEL CARRUSEL DE NOTICIAS (SWIPER)
+   ========================================================================== */
+.news-slider-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.newsSwiper {
+  padding: 12px 6px 40px !important;
+}
+
+.newsSwiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.newsSwiper .news-card {
+  width: 100%;
+  height: 100%;
+}
+
+.news-next,
+.news-prev {
+  color: var(--color-orange) !important;
+  background: var(--color-white);
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 26, 74, 0.15);
+  border: 1px solid var(--border-color);
+  transition: var(--transition-fast);
+}
+
+.news-next::after,
+.news-prev::after {
+  font-size: 1.1rem !important;
+  font-weight: 900;
+}
+
+.news-next:hover,
+.news-prev:hover {
+  background: var(--color-orange);
+  color: var(--color-white) !important;
+  transform: scale(1.08);
+}
+
+.news-prev {
+  left: -20px !important;
+}
+
+.news-next {
+  right: -20px !important;
+}
+
+.newsSwiper .swiper-pagination-bullet-active {
+  background-color: var(--color-orange) !important;
+  width: 22px;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .news-prev,
+  .news-next {
+    display: none !important;
+  }
+}
