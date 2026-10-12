@@ -2,8 +2,8 @@
  * MOTOR DINÁMICO DE NOTICIAS - AGRI LAB 506
  */
 
-// URL CSV de Google Sheets (Asegúrate de cambiar gid por el de tu pestaña de noticias)
-const SHEET_CSV_NOTICIAS = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQcEPvs5r9YVEcW9VEajpS5x-iYwMQWYMkreg8TK_nDgLEsKqiOt0VEmCgmev_4lkOTHh-62tcOa3a1/pub?gid=0&single=true&output=csv";
+// URL CSV de Google Sheets (Pestaña de noticias)
+const SHEET_CSV_NOTICIAS = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSugZplAvcSBZjGPZikP3jhTaKA6DtMwZpOZc0_ophORRVGjemhu3Z5JEY3EnsZMUayuhviSia3Gf58/pub?gid=194535019&single=true&output=csv";
 
 let newsSwiperInstance = null;
 
@@ -27,13 +27,19 @@ function parsearLineaCSV(linea) {
   return resultado;
 }
 
+/**
+ * Convierte enlaces de Google Drive de forma robusta para renderizar imágenes
+ */
 function convertirLinkDriveAImagen(url) {
   if (!url || url.trim() === "") {
     return "assets/images/noticia1.jpg";
   }
-  const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
-  if (!match) return url;
-  return `https://docs.google.com/uc?export=view&id=${match[1]}`;
+  const cleanUrl = url.trim();
+  const match = cleanUrl.match(/\/d\/([a-zA-Z0-9_-]+)/) || cleanUrl.match(/id=([a-zA-Z0-9_-]+)/);
+  if (!match) return cleanUrl;
+  
+  // Usar el dominio de Google UserContent para renderizar imágenes públicas de Drive sin restricciones
+  return `https://lh3.googleusercontent.com/d/${match[1]}`;
 }
 
 function inicializarCarruselNoticias() {
@@ -81,23 +87,29 @@ async function cargarNoticiasDinamicas() {
       return;
     }
 
-    // Mapeo basado exactamente en las columnas de tu imagen:
-    // col[0] = Fecha | col[1] = Titulo | col[2] = Resumens | col[3] = Plataforma | col[4] = Imagen
+    /**
+     * Mapeo exacto según el orden de tus columnas:
+     * col[0] = Fecha
+     * col[1] = Titulo
+     * col[2] = Resumens
+     * col[3] = Plataforma
+     * col[4] = Enlace
+     * col[5] = Imagen
+     */
     const htmlSlides = filas.slice(1).map(row => {
       const col = parsearLineaCSV(row);
       const fecha = col[0] || "Reciente";
       const titulo = col[1] || "Noticia AGRI Lab 506";
       const resumen = col[2] || "";
       const plataforma = col[3] || "";
-      const imagen = convertirLinkDriveAImagen(col[4]);
-      // Si deseas agregar un enlace web en una columna extra (ej. col[5]), puedes usarla; de lo contrario usará '#' o la plataforma
-      const enlace = col[5] || "#"; 
+      const enlace = col[4] && col[4].trim() !== "" ? col[4].trim() : "#";
+      const imagen = convertirLinkDriveAImagen(col[5]);
 
       return `
         <div class="swiper-slide">
           <article class="news-card">
             <div class="news-img-wrap">
-              <img src="${imagen}" alt="${titulo}">
+              <img src="${imagen}" alt="${titulo}" onerror="this.src='assets/images/noticia1.jpg'">
               <span class="news-date">${fecha} ${plataforma ? '· ' + plataforma : ''}</span>
             </div>
             <div class="news-body">
