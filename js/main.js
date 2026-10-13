@@ -2,12 +2,12 @@
  * MOTOR DINÁMICO DE NOTICIAS - AGRI LAB 506
  */
 
-// URL CSV de Google Sheets (Pestaña de noticias)
-const SHEET_CSV_NOTICIAS = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQcEPvs5r9YVEcW9VEajpS5x-iYwMQWYMkreg8TK_nDgLEsKqiOt0VEmCgmev_4lkOTHh-62tcOa3a1/pub?gid=0&single=true&output=csv";
+// URL TSV de Google Sheets (Pestaña de noticias)
+const SHEET_TSV_NOTICIAS = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQcEPvs5r9YVEcW9VEajpS5x-iYwMQWYMkreg8TK_nDgLEsKqiOt0VEmCgmev_4lkOTHh-62tcOa3a1/pub?gid=0&single=true&output=tsv";
 
 let newsSwiperInstance = null;
 
-function parsearLineaCSV(linea) {
+function parsearLineaTSV(linea) {
   const resultado = [];
   let dentroDeComillas = false;
   let entradaActual = "";
@@ -16,7 +16,7 @@ function parsearLineaCSV(linea) {
     const char = linea[i];
     if (char === '"') {
       dentroDeComillas = !dentroDeComillas;
-    } else if (char === ',' && !dentroDeComillas) {
+    } else if (char === '\t' && !dentroDeComillas) {
       resultado.push(entradaActual.trim().replace(/^"|"$/g, ''));
       entradaActual = "";
     } else {
@@ -76,11 +76,11 @@ async function cargarNoticiasDinamicas() {
   if (!wrapper) return;
 
   try {
-    const response = await fetch(SHEET_CSV_NOTICIAS);
+    const response = await fetch(SHEET_TSV_NOTICIAS);
     if (!response.ok) throw new Error("Error al conectar con Google Sheets.");
 
-    const csvTexto = await response.text();
-    const filas = csvTexto.split(/\r?\n/).filter(f => f.trim() !== "");
+    const tsvTexto = await response.text();
+    const filas = tsvTexto.split(/\r?\n/).filter(f => f.trim() !== "");
 
     if (filas.length <= 1) {
       inicializarCarruselNoticias();
@@ -97,7 +97,7 @@ async function cargarNoticiasDinamicas() {
      * col[5] = Imagen
      */
     const htmlSlides = filas.slice(1).map(row => {
-      const col = parsearLineaCSV(row);
+      const col = parsearLineaTSV(row);
       const fecha = col[0] || "Reciente";
       const titulo = col[1] || "Noticia AGRI Lab 506";
       const resumen = col[2] || "";
